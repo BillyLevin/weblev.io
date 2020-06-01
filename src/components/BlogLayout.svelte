@@ -20,10 +20,6 @@
 	h2 {
 		line-height: 1.25;
 	}
-
-	:global(p) {
-		line-height: 1.5;
-	}
 </style>
 
 <svelte:head>
