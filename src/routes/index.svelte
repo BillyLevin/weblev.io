@@ -7,6 +7,7 @@
 		faAddressCard,
 	} from '@fortawesome/free-regular-svg-icons';
 	import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+	import { faPen } from '@fortawesome/free-solid-svg-icons';
 </script>
 
 <svelte:head>
@@ -24,7 +25,7 @@
 
 	<section class="stuff">
 		<a href="/blog">
-			<Icon data={faNewspaper} class="icon" label="test label" />
+			<Icon data={faPen} class="icon" label="test label" />
 			<span>Check out my blog</span>
 		</a>
 		<a href="/about">
