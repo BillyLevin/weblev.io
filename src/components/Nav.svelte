@@ -2,45 +2,6 @@
 	export let segment;
 </script>
 
-<style>
-	nav {
-		border-bottom: 1px solid rgba(var(--primaryRGB), 0.3);
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 500;
-	}
-
-	ul {
-		display: flex;
-		list-style: none;
-		padding: 0.5rem;
-	}
-
-	li {
-		padding: 1rem;
-	}
-
-	li.social {
-		margin-left: auto;
-	}
-
-	a {
-		text-decoration: none;
-		border-bottom: 2px solid transparent;
-		padding-bottom: 0.5rem;
-	}
-
-	[aria-current],
-	a:focus {
-		outline: 0;
-		border-color: inherit;
-		border-bottom: 2px solid inherit;
-	}
-
-	a:focus {
-		color: var(--primaryLight);
-	}
-</style>
-
 <nav>
 	<ul>
 		<li>
@@ -83,3 +44,42 @@
 		</li>
 	</ul>
 </nav>
+
+<style>
+	nav {
+		border-bottom: 1px solid rgba(var(--primaryRGB), 0.3);
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+	}
+
+	ul {
+		display: flex;
+		list-style: none;
+		padding: 0.5rem;
+	}
+
+	li {
+		padding: 1rem;
+	}
+
+	li.social {
+		margin-left: auto;
+	}
+
+	a {
+		text-decoration: none;
+		border-bottom: 2px solid transparent;
+		padding-bottom: 0.5rem;
+	}
+
+	[aria-current],
+	a:focus {
+		outline: 0;
+		border-color: inherit;
+		border-bottom: 2px solid inherit;
+	}
+
+	a:focus {
+		color: var(--primaryLight);
+	}
+</style>

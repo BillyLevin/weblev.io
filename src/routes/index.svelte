@@ -2,10 +2,49 @@
 	import Icon from 'svelte-awesome';
 	import {
 		faNewspaper,
-		faAddressCard
+		faAddressCard,
 	} from '@fortawesome/free-regular-svg-icons';
 	import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 </script>
+
+<svelte:head>
+	<title>weblev.io — Billy Levin's personal site</title>
+</svelte:head>
+
+<article class="homepage">
+	<header>
+		<h1>Hey!</h1>
+		<h2>
+			I'm Billy Levin. Welcome to my personal site &mdash;
+			<span>weblev.io</span>
+		</h2>
+	</header>
+
+	<section class="stuff">
+		<a href="/blog">
+			<Icon data={faNewspaper} class="icon" label="test label" />
+			<span>Check out my blog</span>
+		</a>
+		<a href="/about">
+			<Icon data={faAddressCard} class="icon" label="test label" />
+			<span>Read more about me</span>
+		</a>
+		<a
+			href="https://github.com/billylevin"
+			target="_blank"
+			rel="noopener noreferrer">
+			<Icon data={faGithub} class="icon" label="test label" />
+			<span>Browse my code on GitHub</span>
+		</a>
+		<a
+			href="https://twitter.com/billylevin"
+			target="_blank"
+			rel="noopener noreferrer">
+			<Icon data={faTwitter} class="icon" label="test label" />
+			<span>Follow me on Twitter</span>
+		</a>
+	</section>
+</article>
 
 <style>
 	h1 {
@@ -57,42 +96,3 @@
 		line-height: 1.25;
 	}
 </style>
-
-<svelte:head>
-	<title>weblev.io — Billy Levin's personal site</title>
-</svelte:head>
-
-<article class="homepage">
-	<header>
-		<h1>Hey!</h1>
-		<h2>
-			I'm Billy Levin. Welcome to my personal site &mdash;
-			<span>weblev.io</span>
-		</h2>
-	</header>
-
-	<section class="stuff">
-		<a href="/blog">
-			<Icon data={faNewspaper} class="icon" label="test label" />
-			<span>Check out my blog</span>
-		</a>
-		<a href="/about">
-			<Icon data={faAddressCard} class="icon" label="test label" />
-			<span>Read more about me</span>
-		</a>
-		<a
-			href="https://github.com/billylevin"
-			target="_blank"
-			rel="noopener noreferrer">
-			<Icon data={faGithub} class="icon" label="test label" />
-			<span>Browse my code on GitHub</span>
-		</a>
-		<a
-			href="https://twitter.com/billylevin"
-			target="_blank"
-			rel="noopener noreferrer">
-			<Icon data={faTwitter} class="icon" label="test label" />
-			<span>Follow me on Twitter</span>
-		</a>
-	</section>
-</article>
