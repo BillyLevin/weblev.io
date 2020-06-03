@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;900&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@300;500;900&display=swap');
 
 :root {
 	--primaryRGB: 34, 156, 201;
@@ -10,7 +10,7 @@
 	--danger: #b50e0e;
 
 	--bg: #222;
-	--text: #fff;
+	--text: #a8b9c0;
 }
 
 *,
@@ -27,7 +27,7 @@ html {
 
 body {
 	color: var(--text);
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1rem;
 	font-weight: 400;
 	background-color: var(--bg);
@@ -59,6 +59,6 @@ a:focus {
 }
 
 p {
-	margin-bottom: 1rem;
-	line-height: 1.5;
+	margin-bottom: 1.5rem;
+	line-height: 1.6;
 }

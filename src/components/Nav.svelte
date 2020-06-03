@@ -7,8 +7,6 @@
 		border-bottom: 1px solid rgba(var(--primaryRGB), 0.3);
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 500;
-		/* display: flex; */
-		/* justify-content: space-between; */
 	}
 
 	ul {

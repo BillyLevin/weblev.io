@@ -2,7 +2,6 @@
 	export let title;
 	export let published;
 	export let author = undefined;
-	export let subtitle = undefined;
 	export let authorLink = undefined;
 
 	const date = new Date(published).toLocaleDateString(undefined, {
@@ -19,8 +18,17 @@
 		line-height: 1.125;
 	}
 
-	h2 {
-		line-height: 1.25;
+	.emphasis {
+		color: var(--primary);
+	}
+
+	:global(.blog-post p) {
+		letter-spacing: 1px;
+	}
+
+	.details {
+		font-size: 0.9rem;
+		margin-bottom: 3rem;
 	}
 </style>
 
@@ -28,19 +36,17 @@
 	<title>{title} | weblev.io</title>
 </svelte:head>
 
-<article>
+<article class="blog-post">
 	<header>
 		<h1>{title}</h1>
-		<p>
+		<p class="details">
 			<time datetime={published}>{date}</time>
-			&bull; Written by
+			<span class="emphasis">&bull;</span>
+			Written by
 			<a href={authorLink || 'https://twitter.com/billylevin'}>
 				{author || 'Billy Levin'}
 			</a>
 		</p>
-		{#if subtitle}
-			<h2>{subtitle}</h2>
-		{/if}
 	</header>
 
 	<slot>

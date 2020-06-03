@@ -5,11 +5,11 @@ layout: blog
 ---
 
 <script>
-    import Counter from '../../../components/Counter.svelte'
+    import Counter from './Counter.svelte'
 </script>
 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse cum soluta quisquam eos sunt sit. Vel illo quibusdam eaque dicta rerum, libero, eveniet, quasi illum aut beatae qui non tenetur est veritatis aliquam molestiae veniam officiis quis distinctio consectetur sint nobis et cum! Tempore rem quaerat accusantium officiis possimus?
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse cum soluta quisquam eos sunt sit. Vel illo quibusdam eaque dicta rerum, libero, eveniet, quasi illum aut beatae qui non tenetur est veritatis aliquam molestiae veniam officiis quis distinctio consectetur sint nobis et cum! Tempore rem quaerat accusantium officiis possimus?
+
 <Counter />
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse cum soluta quisquam eos sunt sit. Vel illo quibusdam eaque dicta rerum, libero, eveniet, quasi illum aut beatae qui non tenetur est veritatis aliquam molestiae veniam officiis quis distinctio consectetur sint nobis et cum! Tempore rem quaerat accusantium officiis possimus?
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse cum soluta quisquam eos sunt sit. Vel illo quibusdam eaque dicta rerum, libero, eveniet, quasi illum aut beatae qui non tenetur est veritatis aliquam molestiae veniam officiis quis distinctio consectetur sint nobis et cum! Tempore rem quaerat accusantium officiis possimus?

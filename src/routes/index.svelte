@@ -1,3 +1,12 @@
+<script>
+	import Icon from 'svelte-awesome';
+	import {
+		faNewspaper,
+		faAddressCard
+	} from '@fortawesome/free-regular-svg-icons';
+	import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+</script>
+
 <style>
 	h1 {
 		font-size: 4.5rem;
@@ -18,37 +27,34 @@
 		color: var(--primary);
 	}
 
-	h3 {
+	:global(.homepage .icon) {
+		height: 4rem;
+		width: auto;
 		color: var(--primary);
-		font-size: 2rem;
-		margin-bottom: 1rem;
-		font-weight: 500;
-		letter-spacing: 2px;
+		margin-bottom: 0.5rem;
+	}
+	:global(a:hover .icon) {
+		color: inherit;
 	}
 
-	ul {
-		list-style: none;
-	}
-
-	li {
-		position: relative;
+	.stuff {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.stuff a {
+		display: flex;
+		flex-direction: column;
 		align-items: center;
-	}
-
-	li::before {
-		content: '';
-		width: 8px;
-		height: 8px;
-		border-radius: 4px;
-		position: relative;
-		background-color: var(--primary);
-		margin-right: 1rem;
-		display: inline-block;
-	}
-
-	li:not(:last-child) {
-		margin-bottom: 1rem;
+		flex: 0 0 20%;
+		margin: 1rem;
+		text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1.25rem;
+		line-height: 1.25;
 	}
 </style>
 
@@ -56,47 +62,37 @@
 	<title>weblev.io — Billy Levin's personal site</title>
 </svelte:head>
 
-<article>
-	<h1>Hey!</h1>
-	<h2>
-		I'm Billy Levin. Welcome to my personal site &mdash;
-		<span>weblev.io</span>
-	</h2>
-	<h3>Stuff to do</h3>
-	<ul>
-		<li>
-			<span>
-				Read more
-				<a href="/about">about me</a>
-			</span>
-		</li>
-		<li>
-			<span>
-				Check out
-				<a href="/blog">my blog</a>
-			</span>
-		</li>
-		<li>
-			<span>
-				Browse my code on
-				<a
-					href="https://github.com/billylevin"
-					target="_blank"
-					rel="noopener noreferrer">
-					GitHub
-				</a>
-			</span>
-		</li>
-		<li>
-			<span>
-				Follow me on
-				<a
-					href="https://twitter.com/billylevin"
-					target="_blank"
-					rel="noopener noreferrer">
-					Twitter
-				</a>
-			</span>
-		</li>
-	</ul>
+<article class="homepage">
+	<header>
+		<h1>Hey!</h1>
+		<h2>
+			I'm Billy Levin. Welcome to my personal site &mdash;
+			<span>weblev.io</span>
+		</h2>
+	</header>
+
+	<section class="stuff">
+		<a href="/blog">
+			<Icon data={faNewspaper} class="icon" label="test label" />
+			<span>Check out my blog</span>
+		</a>
+		<a href="/about">
+			<Icon data={faAddressCard} class="icon" label="test label" />
+			<span>Read more about me</span>
+		</a>
+		<a
+			href="https://github.com/billylevin"
+			target="_blank"
+			rel="noopener noreferrer">
+			<Icon data={faGithub} class="icon" label="test label" />
+			<span>Browse my code on GitHub</span>
+		</a>
+		<a
+			href="https://twitter.com/billylevin"
+			target="_blank"
+			rel="noopener noreferrer">
+			<Icon data={faTwitter} class="icon" label="test label" />
+			<span>Follow me on Twitter</span>
+		</a>
+	</section>
 </article>
