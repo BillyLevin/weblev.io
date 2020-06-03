@@ -2,7 +2,7 @@
 	import Icon from 'svelte-awesome';
 	import {
 		faNewspaper,
-		faAddressCard
+		faAddressCard,
 	} from '@fortawesome/free-regular-svg-icons';
 	import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 </script>

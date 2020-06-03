@@ -7,7 +7,7 @@
 	const date = new Date(published).toLocaleDateString(undefined, {
 		month: 'long',
 		day: 'numeric',
-		year: 'numeric'
+		year: 'numeric',
 	});
 </script>
 
