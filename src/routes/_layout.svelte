@@ -4,6 +4,12 @@
 	export let segment;
 </script>
 
+<Nav {segment} />
+
+<main>
+	<slot />
+</main>
+
 <style>
 	main {
 		position: relative;
@@ -12,9 +18,3 @@
 		margin: 0 auto;
 	}
 </style>
-
-<Nav {segment} />
-
-<main>
-	<slot />
-</main>

@@ -1,1 +1,5 @@
-{ "useTabs": true, "singleQuote": true }
+{
+	"useTabs": true,
+	"singleQuote": true,
+	"svelteSortOrder": "scripts-markup-styles"
+}

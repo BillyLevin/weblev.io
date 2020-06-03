@@ -11,27 +11,6 @@
 	});
 </script>
 
-<style>
-	h1 {
-		font-size: 3.5rem;
-		color: var(--primary);
-		line-height: 1.125;
-	}
-
-	.emphasis {
-		color: var(--primary);
-	}
-
-	:global(.blog-post p) {
-		letter-spacing: 1px;
-	}
-
-	.details {
-		font-size: 0.9rem;
-		margin-bottom: 3rem;
-	}
-</style>
-
 <svelte:head>
 	<title>{title} | weblev.io</title>
 </svelte:head>
@@ -53,3 +32,24 @@
 		<!-- content goes here -->
 	</slot>
 </article>
+
+<style>
+	h1 {
+		font-size: 3.5rem;
+		color: var(--primary);
+		line-height: 1.125;
+	}
+
+	.emphasis {
+		color: var(--primary);
+	}
+
+	:global(.blog-post p) {
+		letter-spacing: 1px;
+	}
+
+	.details {
+		font-size: 0.9rem;
+		margin-bottom: 3rem;
+	}
+</style>
