@@ -1,11 +1,39 @@
-import fs from 'fs';
+import { promises as fs } from 'fs';
+import { transform } from 'mdsvex';
 
-function findPosts() {
-	const posts = fs.readdirSync('src/routes/blog');
+async function findPosts() {
+	const files = await fs.readdir('src/routes/blog');
+	const posts = [];
 
-	return [];
+	for (const fileName of files) {
+		const stats = await fs.lstat(`src/routes/blog/${fileName}`);
+		const isDirectory = stats.isDirectory();
+		if (isDirectory) {
+			posts.push(fileName);
+		}
+	}
+
+	const formatted = [];
+
+	for (const post of posts) {
+		const contents = await fs.readFile(
+			`src/routes/blog/${post}/index.svx`,
+			'utf-8'
+		);
+
+		const parser = transform({ layout: false });
+
+		const { data } = await parser.process({ contents, filename: post });
+
+		const { fm } = data;
+
+		formatted.push({
+			slug: post,
+			title: fm.title,
+		});
+	}
+
+	return formatted;
 }
 
-const posts = findPosts();
-
-export default posts;
+export default findPosts;

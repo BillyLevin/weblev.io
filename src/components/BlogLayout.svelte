@@ -1,7 +1,9 @@
 <script>
 	export let title;
 	export let published;
+	export let author = undefined;
 	export let subtitle = undefined;
+	export let authorLink = undefined;
 
 	const date = new Date(published).toLocaleDateString(undefined, {
 		month: 'long',
@@ -31,6 +33,10 @@
 		<h1>{title}</h1>
 		<p>
 			<time datetime={published}>{date}</time>
+			&bull; Written by
+			<a href={authorLink || 'https://twitter.com/billylevin'}>
+				{author || 'Billy Levin'}
+			</a>
 		</p>
 		{#if subtitle}
 			<h2>{subtitle}</h2>
