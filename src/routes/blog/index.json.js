@@ -11,6 +11,8 @@ export async function get(req, res) {
 			return {
 				title: post.title,
 				slug: post.slug,
+				published: post.published,
+				desc: post.desc,
 			};
 		})
 	);

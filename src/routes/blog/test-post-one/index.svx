@@ -2,6 +2,7 @@
 title: This is a test post
 published: 2020-05-31
 layout: blog
+desc: This is the description of my first test blog post. I'm putting information here
 ---
 
 <script>

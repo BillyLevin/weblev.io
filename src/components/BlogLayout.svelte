@@ -1,14 +1,11 @@
 <script>
+	import { formatDate } from '../utils.js';
 	export let title;
 	export let published;
 	export let author = undefined;
 	export let authorLink = undefined;
 
-	const date = new Date(published).toLocaleDateString(undefined, {
-		month: 'long',
-		day: 'numeric',
-		year: 'numeric',
-	});
+	const date = formatDate(published);
 </script>
 
 <svelte:head>

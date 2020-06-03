@@ -15,6 +15,8 @@ async function findPosts() {
 
 	const formatted = [];
 
+	const required = ['desc', 'title', 'published'];
+
 	for (const post of posts) {
 		const contents = await fs.readFile(
 			`src/routes/blog/${post}/index.svx`,
@@ -27,9 +29,15 @@ async function findPosts() {
 
 		const { fm } = data;
 
+		required.forEach((key) => {
+			if (fm[key] == null) {
+				throw Error(`"${key}" is missing from blog post metadata`);
+			}
+		});
+
 		formatted.push({
 			slug: post,
-			title: fm.title,
+			...fm,
 		});
 	}
 

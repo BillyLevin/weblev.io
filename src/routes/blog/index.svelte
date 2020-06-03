@@ -9,6 +9,7 @@
 </script>
 
 <script>
+	import { formatDate } from '../../utils.js';
 	export let posts;
 </script>
 
@@ -16,23 +17,39 @@
 	<title>Blog | weblev.io</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
+<h1>Posts</h1>
 
-<ul>
-	{#each posts as post}
-		<!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
-		<li>
-			<a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
-		</li>
-	{/each}
-</ul>
+{#each posts as post}
+	<article>
+		<header>
+			<h2>
+				<a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
+			</h2>
+			<time datetime={post.published}>{formatDate(post.published)}</time>
+		</header>
+		<p>{post.desc}</p>
+	</article>
+{/each}
 
 <style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
+	h1 {
+		margin-bottom: 2rem;
+	}
+
+	h2 a {
+		text-decoration: none;
+		font-size: 2rem;
+	}
+
+	article {
+		margin-bottom: 3rem;
+	}
+
+	article header {
+		margin-bottom: 1rem;
+	}
+
+	time {
+		font-size: 0.9rem;
 	}
 </style>

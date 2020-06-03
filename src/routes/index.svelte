@@ -1,4 +1,6 @@
 <script>
+	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 	import Icon from 'svelte-awesome';
 	import {
 		faNewspaper,
