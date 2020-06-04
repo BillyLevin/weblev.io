@@ -25,7 +25,10 @@ async function findPosts() {
 
 		const parser = transform({ layout: false });
 
-		const { data } = await parser.process({ contents, filename: post });
+		const { data } = await parser.process({
+			contents,
+			filename: post,
+		});
 
 		const { fm } = data;
 

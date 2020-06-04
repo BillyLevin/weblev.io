@@ -18,3 +18,15 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse cum sol
 ```js
 console.log('test');
 ```
+
+```html
+<script>
+	let count = 0;
+	function increment() {
+		count += 1;
+	}
+</script>
+
+<button on:click="{increment}">click</button>
+<p>count: {count}</p>
+```

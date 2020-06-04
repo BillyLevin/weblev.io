@@ -2,8 +2,8 @@
 	import { formatDate } from '../utils.js';
 	export let title;
 	export let published;
-	export let author = undefined;
-	export let authorLink = undefined;
+	export let author = 'Billy Levin';
+	export let authorLink = 'https://twitter.com/billylevin';
 
 	const date = formatDate(published);
 </script>
@@ -19,9 +19,7 @@
 			<time datetime={published}>{date}</time>
 			<span class="emphasis">&bull;</span>
 			Written by
-			<a href={authorLink || 'https://twitter.com/billylevin'}>
-				{author || 'Billy Levin'}
-			</a>
+			<a href={authorLink}>{author}</a>
 		</p>
 	</header>
 

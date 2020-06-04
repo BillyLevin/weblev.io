@@ -1,6 +1,26 @@
 ---
-title: About Me
+title: About
 layout: page
 ---
 
-todo
+Hi! My name is Billy Levin. I'm a web developer based in London, UK. 
+
+The initial aim for this blog is to document things I've learned, and hopefully help others who run into similar problems! This is the first step in my attempt to [learn in public](https://www.swyx.io/writing/learn-in-public/).
+
+
+## Tech
+
+I've worked with a lot of different technologies. Here are some of my favourites:
+
+- React
+- TypeScript
+- Svelte
+- GraphQL
+- styled-components
+- SCSS
+
+Outside of work, I spend some of my time contributing to open source projects that I'm passionate about.
+
+## Get in touch
+
+If you have any feedback or corrections, or just want to chat, you can reach me on [Twitter](https://twitter.com/billylevin) or email me at billy.levin97@gmail.com.
