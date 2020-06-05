@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@300;500;900&display=swap');
 
 :root {
-	--primaryRGB: 34, 156, 201;
+	--primary-rgb: 34, 156, 201;
 
-	--primary: rgb(var(--primaryRGB));
+	--primary: rgb(var(--primary-rgb));
 	--primaryDark: #0b4155;
-	--primaryGrey: #eaf3f7;
 	--primaryLight: #5cbee2;
+	--primaryBlack: #061c24;
+	--primaryGrey: #eaf3f7;
 	--danger: #b50e0e;
 
 	--bg: #222;

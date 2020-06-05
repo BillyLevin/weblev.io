@@ -47,7 +47,7 @@
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(var(--primaryRGB), 0.3);
+		border-bottom: 1px solid rgba(var(--primary-rgb), 0.3);
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 500;
 	}

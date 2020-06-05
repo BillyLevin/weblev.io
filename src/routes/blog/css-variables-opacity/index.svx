@@ -1,0 +1,53 @@
+---
+title: Applying Opacity to a CSS Color Variable
+published: 2020-06-05
+desc: How you can easily use your CSS color variables in the rgba() function
+---
+
+Let's say your site is using [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) to manage some of your colours:
+
+```css
+:root {
+	--primary: #0b4155;
+}
+```
+
+You probably use this `primary` variable all over the place, and you're likely going to want to use it in an `rgba()` function at some point to apply some opacity.
+
+You could manually paste in the RGB value of the variable, but that's a lot of work and you'd have to correct it everywhere if you ever changed the variable.
+
+## Basic Solution
+
+Fortunately, there is an easy solution for this: we can store the RGB values in a separate CSS variable like so:
+
+```css
+:root {
+	--primary: #0b4155;
+	--primary-rgb: 11, 65, 85;
+}
+```
+
+Now, we can insert the RGB values into the `rgba()` function:
+
+```css
+.box {
+	border: 2px solid rgba(var(--primary-rgb), 0.2);
+}
+```
+
+## Let's Get Lazier
+
+This is good, but we can still take it further. You may have noticed that if we want to change the colour, we still have to update two variables - `primary` and `primary-rgb`. I'm lazy, and I can't be bothered to do this, so let's fix that!
+
+It turns out that we can actually use CSS variables in the definition of other CSS variables - cool!
+
+All we need to do is define `primary-rgb`, then make `primary` dependent on it:
+
+```css
+:root {
+	--primary-rgb: 11, 65, 85;
+	--primary: rgb(--primary-rgb);
+}
+```
+
+Now, whenever we update `primary-rgb`, `primary` will be synced with it!

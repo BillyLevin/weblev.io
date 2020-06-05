@@ -43,6 +43,25 @@
 		letter-spacing: 1px;
 	}
 
+	:global(.blog-post p code) {
+		/* TODO: find out why 1rem is not 16px here */
+		font-size: 16px;
+		background-color: var(--primaryBlack);
+		padding: 0.25rem;
+		border-radius: 2px;
+		color: var(--primaryGrey);
+	}
+
+	:global(.blog-post pre) {
+		margin-bottom: 1.5rem;
+	}
+
+	:global(.blog-post h2) {
+		color: var(--primary);
+		margin: 2.5rem 0;
+		font-size: 2.5rem;
+	}
+
 	.details {
 		font-size: 0.9rem;
 		margin-bottom: 3rem;
