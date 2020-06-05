@@ -52,4 +52,41 @@
 	time {
 		font-size: 0.9rem;
 	}
+
+	@media only screen and (max-width: 45em) {
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		h2 a {
+			font-size: 1.5rem;
+		}
+
+		time {
+			font-size: 0.8rem;
+		}
+
+		p {
+			font-size: 0.9rem;
+		}
+
+		article {
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	@media only screen and (max-width: 31.25em) {
+		h1 {
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+		}
+
+		h2 a {
+			font-size: 1.2rem;
+		}
+
+		article {
+			margin-bottom: 2rem;
+		}
+	}
 </style>

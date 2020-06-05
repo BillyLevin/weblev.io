@@ -98,4 +98,39 @@
 		font-size: 1.25rem;
 		line-height: 1.25;
 	}
+
+	@media only screen and (max-width: 45em) {
+		h1 {
+			font-size: 3.5rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+		.stuff a {
+			flex: 0 0 40%;
+			margin: 0 0 3rem 0;
+			font-size: 1rem;
+		}
+	}
+
+	@media only screen and (max-width: 31.25em) {
+		h1 {
+			font-size: 3rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-bottom: 2rem;
+		}
+		.stuff a {
+			font-size: 0.9rem;
+			flex: 0 0 100%;
+		}
+
+		:global(.homepage .icon) {
+			height: auto;
+			width: 6rem;
+		}
+	}
 </style>

@@ -66,4 +66,35 @@
 		font-size: 0.9rem;
 		margin-bottom: 3rem;
 	}
+
+	@media only screen and (max-width: 56.25em) {
+		h1 {
+			font-size: 3rem;
+		}
+	}
+
+	@media only screen and (max-width: 45em) {
+		h1 {
+			font-size: 2.75rem;
+		}
+	}
+
+	@media only screen and (max-width: 37.5em) {
+		h1 {
+			font-size: 2rem;
+		}
+
+		:global(.blog-post p) {
+			font-size: 0.9rem;
+		}
+
+		:global(.blog-post p code) {
+			font-size: 14.4px;
+		}
+
+		:global(.blog-post h2) {
+			font-size: 2rem;
+			margin: 1.5rem 0;
+		}
+	}
 </style>
