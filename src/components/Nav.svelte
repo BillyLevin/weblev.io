@@ -82,4 +82,14 @@
 	a:focus {
 		color: var(--primaryLight);
 	}
+
+	@media only screen and (max-width: 31.25em) {
+		ul {
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		li.social {
+			margin-left: 0;
+		}
+	}
 </style>

@@ -4,7 +4,7 @@
 	import Icon from 'svelte-awesome';
 	import {
 		faNewspaper,
-		faAddressCard
+		faAddressCard,
 	} from '@fortawesome/free-regular-svg-icons';
 	import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 	import { faPen } from '@fortawesome/free-solid-svg-icons';
@@ -109,7 +109,7 @@
 		}
 		.stuff a {
 			flex: 0 0 40%;
-			margin-bottom: 3rem;
+			margin: 0 0 3rem 0;
 			font-size: 1rem;
 		}
 	}
