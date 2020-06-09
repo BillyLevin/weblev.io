@@ -46,7 +46,7 @@ All we need to do is define `primary-rgb`, then make `primary` dependent on it:
 ```css
 :root {
 	--primary-rgb: 11, 65, 85;
-	--primary: rgb(--primary-rgb);
+	--primary: rgb(var(--primary-rgb));
 }
 ```
 
